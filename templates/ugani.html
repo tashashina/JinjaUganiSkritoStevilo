@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ugani skrito število </title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Ugani skrito število</h1>
+
+    <form action="/" method="post">
+      Vnesi število: <input type="number" name="vnos_stevila" /><br />
+      <button type="submit">Preveri </button>
+    </form>
+
+    {% if rezultat %}
+       <p>Bravo, uganil si število. Iskano število je {{pravo_stevilo}} </p>
+    {% elif rezultat == False %}
+      <p>Nisi uganil števila, poskusi ponovno. </p>
+    {% endif %}
+
+</body>
+</html>
